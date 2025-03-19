@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dumble Fitness Club</title>
+  <style>
+    /* Reset and basic styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Baloo Bhai 2", cursive;
+      background: url(https://i.postimg.cc/KzPQXFm4/Boxing-girl.jpg) no-repeat center center/cover;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header styles */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .left, .right {
+      display: flex;
+      align-items: center;
+    }
+
+    .left img {
+      width: 5rem; /* Relative unit */
+      filter: invert(100%);
+    }
+
+    .left div {
+      margin-left: 0.5rem; /* Relative unit */
+      font-size: 1.2rem; /* Relative unit */
+    }
+
+    .navbar {
+      display: flex;
+      list-style: none;
+    }
+
+    .navbar li {
+      margin: 0 1rem; /* Relative unit */
+    }
+
+    .navbar li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem; /* Relative unit */
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+      text-decoration: underline;
+      color: gray;
+    }
+
+    .btn {
+      font-family: "Baloo Bhai 2", cursive;
+      margin: 0 0.5rem; /* Relative unit */
+      color: white;
+      background-color: black;
+      padding: 0.5rem 1rem; /* Relative unit */
+      border: 2px solid rgb(241, 241, 241);
+      border-radius: 0.5rem; /* Relative unit */
+      font-size: 1rem; /* Relative unit */
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: rgb(73, 73, 73);
+    }
+
+    /* Main content styles */
+    .cont {
+      border: 2px solid white;
+      margin: 2rem auto; /* Relative unit */
+      padding: 1.5rem; /* Relative unit */
+      border-radius: 1rem; /* Relative unit */
+      max-width: 90%; /* Relative unit */
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .formgroup input {
+      font-family: "Baloo Bhai 2", cursive;
+      margin: 0.5rem auto; /* Relative unit */
+      text-align: center;
+      display: block;
+      width: 100%;
+      max-width: 20rem; /* Relative unit */
+      border-radius: 0.5rem; /* Relative unit */
+      padding: 0.5rem; /* Relative unit */
+      font-size: 1rem; /* Relative unit */
+    }
+
+    .cont h1 {
+      text-align: center;
+      margin-bottom: 1rem; /* Relative unit */
+      font-size: 1.5rem; /* Relative unit */
+    }
+
+    .cont button {
+      display: block;
+      width: 100%;
+      max-width: 10rem; /* Relative unit */
+      margin: 1rem auto; /* Relative unit */
+      padding: 0.5rem; /* Relative unit */
+    }
+
+    /* Mobile-first design: Adjustments for smaller screens */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .left, .right {
+        margin-bottom: 1rem;
+      }
+
+      .navbar {
+        flex-direction: column;
+      }
+
+      .navbar li {
+        margin: 0.5rem 0;
+      }
+
+      .cont {
+        margin: 1rem auto;
+        padding: 1rem;
+      }
+
+      .formgroup input {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="head">
+    <!-- Left box for logo -->
+    <div class="left">
+      <img src="https://i.postimg.cc/QdR1bPct/logo2.png" alt="Dumble Fitness Club" />
+      <div>Fitness Club</div>
+    </div>
+
+    <!-- Mid box for navigation -->
+    <div class="mid">
+      <ul class="navbar">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Fitness Calculator</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Right box for buttons -->
+    <div class="right">
+      <button class="btn">Call Us Now</button>
+      <button class="btn">Email Us</button>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <div class="cont">
+    <h1>Join the best GYM of Vasai now!</h1>
+    <form action="#noaction.php">
+      <div class="formgroup">
+        <input type="text" name="name" placeholder="Enter Name" required />
+      </div>
+      <div class="formgroup">
+        <input type="text" name="age" placeholder="Enter Age" required />
+      </div>
+      <div class="formgroup">
+        <input type="text" name="gender" placeholder="Enter Gender" required />
+      </div>
+      <div class="formgroup">
+        <input type="text" name="locality" placeholder="Enter Your Locality" required />
+      </div>
+      <button class="btn submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
